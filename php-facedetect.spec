@@ -12,7 +12,7 @@ License:	PHP 3.0
 Group:		Development/Languages/PHP
 #Source0:	https://github.com/infusion/PHP-Facedetect/tarball/master/%{modname}.tar.gz
 Source0:	http://www.xarg.org/download/facedetect-%{version}.tar.gz
-# Source0-md5:	e76f2b1fd2b24a84f7123888f433f030
+# Source0-md5:	7b566742020e54bc5938d766f698001a
 URL:		http://www.xarg.org/project/php-facedetect/
 BuildRequires:	%{php_name}-devel
 BuildRequires:	opencv-devel
@@ -29,7 +29,7 @@ coordinates.
 
 %prep
 %setup -qc
-mv infusion-PHP-Facedetect-4b1dfe1/* .
+mv facedetect/* .
 
 %build
 phpize
