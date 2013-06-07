@@ -7,7 +7,7 @@
 Summary:	PHP Facedetect Extension
 Name:		%{php_name}-%{modname}
 Version:	1.1
-Release:	0.1
+Release:	1
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	https://github.com/infusion/PHP-Facedetect/tarball/master/%{modname}.tar.gz
@@ -32,6 +32,7 @@ coordinates.
 mv infusion-PHP-Facedetect-4b1dfe1/* .
 
 %build
+export LIBS=%{_libdir}/libopencv_*.so.*
 phpize
 %configure
 %{__make}
