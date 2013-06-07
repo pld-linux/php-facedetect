@@ -7,7 +7,7 @@
 Summary:	PHP Facedetect Extension
 Name:		%{php_name}-%{modname}
 Version:	1.1
-Release:	1
+Release:	2
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	https://github.com/infusion/PHP-Facedetect/tarball/master/%{modname}.tar.gz
@@ -50,8 +50,6 @@ cat <<'EOF' > $RPM_BUILD_ROOT%{php_sysconfdir}/conf.d/%{modname}.ini
 extension=%{modname}.so
 EOF
 
-cp -a examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -65,7 +63,6 @@ fi
 
 %files
 %defattr(644,root,root,755)
-%doc CREDITS EXPERIMENTAL
+%doc CREDITS
 %config(noreplace) %verify(not md5 mtime size) %{php_sysconfdir}/conf.d/%{modname}.ini
 %attr(755,root,root) %{php_extensiondir}/%{modname}.so
-%{_examplesdir}/%{name}-%{version}
