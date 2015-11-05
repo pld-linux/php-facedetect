@@ -7,7 +7,7 @@
 Summary:	PHP Facedetect Extension
 Name:		%{php_name}-%{modname}
 Version:	1.1.0
-Release:	2
+Release:	3
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	https://github.com/infusion/PHP-Facedetect/archive/v%{version}/%{modname}-%{version}.tar.gz
