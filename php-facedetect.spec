@@ -7,11 +7,12 @@
 Summary:	PHP Facedetect Extension
 Name:		%{php_name}-%{modname}
 Version:	1.1.0
-Release:	3
+Release:	4
 License:	PHP 3.0
 Group:		Development/Languages/PHP
 Source0:	https://github.com/infusion/PHP-Facedetect/archive/v%{version}/%{modname}-%{version}.tar.gz
 # Source0-md5:	4ce5e01bf0933957b37f0d0c5735393a
+Patch0:		opencv3.patch
 URL:		http://www.xarg.org/project/php-facedetect/
 BuildRequires:	%{php_name}-devel
 BuildRequires:	opencv-devel
@@ -28,6 +29,7 @@ coordinates.
 
 %prep
 %setup -q -n PHP-Facedetect-%{version}
+%patch0 -p1
 
 %build
 export LIBS=%{_libdir}/libopencv_*.so.*

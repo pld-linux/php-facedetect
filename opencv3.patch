@@ -1,0 +1,10 @@
+--- PHP-Facedetect-1.1.0/facedetect.c~	2014-04-04 20:54:48.000000000 +0900
++++ PHP-Facedetect-1.1.0/facedetect.c	2016-03-30 23:07:44.412301147 +0900
+@@ -26,6 +26,7 @@
+ 
+ #include <opencv/cv.h>
+ #include <opencv/highgui.h>
++#include <opencv2/core/version.hpp>
+ 
+ /* {{{ facedetect_functions[]
+  *
